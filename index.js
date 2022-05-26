@@ -8,11 +8,14 @@ const PORT = process.env.PORT || 3001;
 const db = require('knex')({
     client: 'pg',
     connection: {
-        host:  '127.0.0.1',
-        user:  'postgres',
-        password: 'Living@123',
-        database: 'finalproject',
+        host:  '127.0.0.1' || 'ec2-34-230-153-41.compute-1.amazonaws.com',
+        user:  'postgres' || 'rajfynbfivvpxc',
+        password: 'Living@123' || '17511953e289e0cbbaffd6b1380d526c1008ddcea584d526f6bc501d07e4791a',
+        database: 'finalproject' || 'd46n57l5ue20qg',
         port: 5432,
+        // ssl: { 
+        //     rejectUnauthorized: false 
+        // }
         
     }
 });
