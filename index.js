@@ -13,13 +13,13 @@ const db = require('knex')({
         password: 'Living@123' || '17511953e289e0cbbaffd6b1380d526c1008ddcea584d526f6bc501d07e4791a',
         database: 'finalproject' || 'd46n57l5ue20qg',
         port: 5432,
-        // ssl: { 
-        //     rejectUnauthorized: false 
-        // }
+        ssl: { 
+            rejectUnauthorized: false 
+        }
         
     }
 });
-
+  
 app.set("db", db);
 
 app.listen(PORT, () => console.log('Example app listening on port 3000!'));
